@@ -1,16 +1,24 @@
 const Sequelize = require('sequelize');
 
-module.exports = class CVStatus extends Sequelize.Model {
+module.exports = class Cities extends Sequelize.Model {
   static init(sequelize) {
     return super.init(
       {
-        cv_status_id: {
+        city_id: {
           type: Sequelize.INTEGER,
           allowNull: false,
           primaryKey: true,
         },
-        cv_status_name: {
+        city_name: {
           type: Sequelize.STRING,
+          allowNull: false,
+        },
+        state_id: {
+          type: Sequelize.INTEGER,
+          allowNull: false,
+        },
+        countries_id: {
+          type: Sequelize.INTEGER,
           allowNull: false,
         },
       },

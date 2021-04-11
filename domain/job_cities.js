@@ -1,21 +1,21 @@
 const Sequelize = require('sequelize');
 
-module.exports = class CVStatus extends Sequelize.Model {
+module.exports = class Status extends Sequelize.Model {
   static init(sequelize) {
     return super.init(
       {
-        cv_status_id: {
+        status_id: {
           type: Sequelize.INTEGER,
           allowNull: false,
           primaryKey: true,
         },
-        cv_status_name: {
+        status_name: {
           type: Sequelize.STRING,
           allowNull: false,
         },
       },
       {
-        tableName: 'cities',
+        tableName: 'status',
         sequelize,
       }
     );
